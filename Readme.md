@@ -15,7 +15,7 @@ Display list to save,view,delete and search their credentials.
 
 ## Installation
 Step to view this application :
-1 Clone this repo.
+1 Clone this repo. (https://github.com/owinolawrence/Password-locker.git)
 
 2 Open the repo using your preffered text editor e.g vscode.
 
