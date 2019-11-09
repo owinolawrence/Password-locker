@@ -25,3 +25,6 @@ Step to view this application :
 
 ## Technologies Used 
 1 Python
+
+## Suppor and Contact details
+THe application is an open source product if you might want to improve on it or incase of any questions please reach me through email. (owinolawrence21@gmail.com)
