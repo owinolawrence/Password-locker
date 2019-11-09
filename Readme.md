@@ -31,6 +31,6 @@ THe application is an open source product if you might want to improve on it or 
 
 ## License
 
-This project is licensed under the terms of MIt
+This project is licensed under the terms of MIT
 
 Copyright (c) 2019 Owino Lawrence Odhiambo
