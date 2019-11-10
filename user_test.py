@@ -76,6 +76,12 @@ def test_credential_exists(self):
     test_credential.save_credential()
     credential_exist =Credential.credential_exist("twitter")
     self.assertTrue(credential_exists)
-       
+def test_display_all_credential(self):
+    '''
+    method that return all the credential saved
+    '''    
+        
+    self.assertEqual(Credential.display_credentials(),Credential.credentials_list)      
+
 if __name__ == '__main__':
     unittest.main()
