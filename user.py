@@ -28,8 +28,22 @@ def save_user(self):
     """
     User.user_list.append(self)
 
-def delete_credential(self):
+def delete_credentials(self):
     """
     delete_credential method to delete a saved credential from credential_list
     """
-    Credential.credential_list.remove(self)
+    Credential.credentials_list.remove(self)
+@classmethod
+
+def find_by_name (cls,account_name):
+    """
+    method that takes in a account name and returns a returns a credential that matches that account name
+
+    Args:
+        account_name:account name to search for 
+    Returns:
+            credential of user that matche  the account name
+    """
+     for credential in cls.credential_list:   
+         if credential.account_name == account_name:
+             return credential    
