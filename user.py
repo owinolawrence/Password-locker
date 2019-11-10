@@ -21,3 +21,9 @@ def __init__(self,username,account_name,account_password):
     self.username= username
     self.account_name = account_name
     self.account_password= account_password
+    
+def save_user(self):
+    """
+    save_user method saves user objects into user_list
+    """
+    User.user_list.append(self)
