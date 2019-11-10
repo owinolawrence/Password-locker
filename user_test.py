@@ -54,8 +54,19 @@ def test_delete_credential(self):
     self.new_credential.save_credential()       
     test_credential = Credential("owinolawrence" ,"instragram", "2017") 
     test_credential.save_credential()
-    Credential.credential_list.remove(test_credential)
+    self.new_credential.delete_credential()#Deleting a credential object
     self.assertEqual(len(Credential.credential_list), 1)
+
+def test_find_user_by_name(self):
+    """
+    test to check if we can find a user by using  account name and display information
+    """
+    self_new_credential.save_credential()
+    test_credential = Credential("owinolawrence","twitter","2018")
+    test_credential.save_credential()
+    found_credential = Credential.find_user_by_name(twitter)
+    self.assertEqual(found_credential.account_password, "2018")
     
+        
 if __name__ == '__main__':
     unittest.main()
