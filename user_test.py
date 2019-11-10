@@ -40,7 +40,22 @@ def tearDown(self):
     tearDown method that does clean up after test case has run.
     """
     User.user_list = []
-    Credential.creating = []
+    Credential.credential_list = []
+
+def test_delete_user(self):
+    """
+    test_delete_user to test if we can remove a user from the user list
+    """
+
+def test_delete_credential(self):
+    """
+    test to check if the user can delete his or her credentials
+    """
+    self.new_credential.save_credential()       
+    test_credential = Credential("owinolawrence" ,"instragram", "2017") 
+    test_credential.save_credential()
+    Credential.credential_list.remove(test_credential)
+    self.assertEqual(len(Credential.credential_list), 1)
     
 if __name__ == '__main__':
     unittest.main()
