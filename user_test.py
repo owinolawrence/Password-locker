@@ -35,5 +35,12 @@ def test_save_object(self):
     self.assertEqual(len(User.user_list),1)
     self.assertEqual(len(Credential.credential_list),1)
 
+def tearDown(self):
+    """
+    tearDown method that does clean up after test case has run.
+    """
+    User.user_list = []
+    Credential.creating = []
+    
 if __name__ == '__main__':
-  unittest.main()  
+    unittest.main()
