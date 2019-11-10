@@ -61,3 +61,10 @@ def find_by_name (cls,account_name):
             if credential.account_name == account_name:
                 return True
         return False    
+
+ @classmethod
+    def display_credentials(cls):
+        '''
+        Method which will display the credential list
+        '''
+        return cls.credentials_list  
