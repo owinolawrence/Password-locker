@@ -47,7 +47,7 @@ def test_delete_user(self):
     test_delete_user to test if we can remove a user from the user list
     """
 
-def test_delete_credential(self):
+def test_delete_credentials(self):
     """
     test to check if the user can delete his or her credentials
     """
@@ -66,7 +66,16 @@ def test_find_user_by_name(self):
     test_credential.save_credential()
     found_credential = Credential.find_user_by_name(twitter)
     self.assertEqual(found_credential.account_password, "2018")
-    
-        
+
+def test_credential_exists(self):
+    """
+    test to check if we can return a Boolean if we cannot find the account name
+    """
+    self_new_credential.save_credential()  
+    test_credential = Credential("owinolawrence","twitter","2018")
+    test_credential.save_credential()
+    credential_exist =Credential.credential_exist("twitter")
+    self.assertTrue(credential_exists)
+       
 if __name__ == '__main__':
     unittest.main()
