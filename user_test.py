@@ -21,5 +21,14 @@ def test_init(self):
     """
     self.assertEqual(self.new_username.login_username,"owinolawrence")
 
+def test_save_object(self):
+    """
+    test_save_object test case to test if the object will be save in user list and credential list
+    """
+    self.new_user.save_detail()
+    self.new_credential.save_credential()
+    
+    self.assertEqual(len(User.user_list)1)
+    self.assertEqual(len(Credential.credential_list)1)
 if __name__ == '__main__':
     unittest.main()
