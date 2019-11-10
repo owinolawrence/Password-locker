@@ -28,7 +28,8 @@ def test_save_object(self):
     self.new_user.save_detail()
     self.new_credential.save_credential()
     
-    self.assertEqual(len(User.user_list)1)
-    self.assertEqual(len(Credential.credential_list)1)
+    self.assertEqual(len(User.user_list),1)
+    self.assertEqual(len(Credential.credential_list),1)
+
 if __name__ == '__main__':
     unittest.main()
