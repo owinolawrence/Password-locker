@@ -39,7 +39,21 @@ def display_credential():
     Functiomn that displays all the saved credentials 
     '''
     return Credential.display_credentials()
+def main():
+    while True:
+        print("*** PASSWORD LOCKER ***")
+        print('_'*30)
+        print("Do you have an account with password Locker? y/n")
+        print("use short 'ex' to  log out")
+        option = input().lower()
+        if option == "y":
 
+            print('*** Login ***')
+            print('Enter username \n')
+            nomname = input()
+            print('\n')
+            print('Enter password')
+            nompass = input()
  
 if __name__ == '__main__':
     main()
