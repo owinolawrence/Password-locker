@@ -158,6 +158,23 @@ def main():
                                 break
                             else:
                                 print("Enter a valid choice")
+                                elif selected == '5':
+                        print("Are you sure you want to exit this site yes/no")
+
+                        exit == input().lower()
+
+                        if exit == 'yes':
+                            print("logged out successfully")
+                            break
+                        
+                        else:
+                            if exit == 'no':
+                                continue
+
+                    else:
+                        print("options not selected")
+                        continue
+
 
                     
 if __name__ == '__main__':
