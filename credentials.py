@@ -175,6 +175,62 @@ def main():
                         print("options not selected")
                         continue
 
+ else:
+                print("The user name does not exist")
+                print("Create Account ")
+                print('*'*40)
+                print('Select Username')
+                my_username = input()
+                print('\n')
+                print('Password \n')
+                my_password = input()
+                save_user(create_user(my_username, my_password))
+                print("signed up successfully")
+
+                # continue
+
+        elif option == "no":
+
+            print("Create Account ")
+            print('*'*40)
+            print('Select Username')
+            my_username = input()
+            print('\n')
+            print('Password \n')
+            my_password = input()
+
+            verification = user_exist(my_username)
+            if verification == True:
+                print("The username already exists")
+            else:
+                save_user(create_user(my_username, my_password))
+
+            while True:
+                print('*** Login ***')
+                print('Enter username \n')
+                nomname = input()
+                print('\n')
+                print('Enter password')
+                nompass = input()
+
+                if nomname != my_username or nompass != my_password:
+                    print("Wrong password or usename")
+
+                    continue
+                else:
+                    print(f"Welcome:{nomname} to your Account ")
+                    print('*'*40)
+
+                    print("Select an option either 1,2,3,4 or 5")
+                    print('\n')
+
+                    while True:
+                        print('1:Add credential')
+                        print('2:View saved credential')
+                        print('3:Delete Credentials')
+                        print('4:Search Credentials')
+                        print('5:Leave')
+                        selected = input()
 
                     
 if __name__ == '__main__':
