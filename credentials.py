@@ -20,7 +20,25 @@ def find_credential(account_name):
     '''
 
     return Credential.find_by_name(account_name)
+def existing_credentials(name):
+    '''
+    Functiion that checks if an account really exists
+    '''
+    return Credential.credential_exist(name)
 
+
+def delete_credential(credentials):
+    '''
+    Function that deletes credentials that are no longer in use
+    '''
+    return Credential.delete_credential(credentials)
+
+
+def display_credential():
+    '''
+    Functiomn that displays all the saved credentials 
+    '''
+    return Credential.display_credentials()
 
  
 if __name__ == '__main__':
