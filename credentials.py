@@ -90,6 +90,28 @@ def main():
                                     accpass = input()
                                     print(
                                         f"Account:{accname} Password:{accpass}")
+                                    elif decision == 'n':
+                                break
+                            else:
+                                print(
+                                    "Wrong choice use  either y to continue or n to stop")
+                    elif selected == '2':
+                        while True:
+                            print('view your credenttial below')
+                            if display_credential():
+
+                                for credential in display_credential():
+                                    print(
+                                        f"Account Name:{creds.account_name} Username: {creds.username} Password:{creds.account_password}")
+
+                            else:
+                                print('\n')
+                                print(
+                                    "You don't have any saved credential before \n")
+
+                            print("Do you want to go back yes/no")
+
+                            reverse = input().lower()
 
                     
 if __name__ == '__main__':
