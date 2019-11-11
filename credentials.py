@@ -112,6 +112,52 @@ def main():
                             print("Do you want to go back yes/no")
 
                             reverse = input().lower()
+                            if reverse == 'yes':
+                                break
+                            elif reverse == 'no':
+                                continue
+                            else:
+                                print("Please input the correct choice")
+                                continue
+                    elif selected == '3':
+                        while True:
+                            print("search for account to delete credential")
+
+                            find = input()
+                            if existing_credentials(find):
+                                accfind = find_credential(find)
+                                print(
+                                    "Are you sure you want to delete your account yes/no")
+                                done = input().lower()
+                                if done == 'yes':
+                                    delete_credential(accfind)
+                                    print("Accont deleted successfully")
+                                    break
+                                elif done == "no":
+                                    continue
+                            else:
+                                print("Credentialz does not exist")
+                                break
+                    elif selected == '4':
+                        while True:
+                            print("Want to proceed y/n")
+                            proc = input().lower()
+                            if proc == 'y':
+                                print(
+                                    "Enter the name of the account to view credential")
+
+                                account = input()
+
+                                if existing_credentials(account):
+                                    found = find_credential(account)
+                                    print(f"ACCOUNT NAME:{found.account_name}")
+                                    print(f"PASSWORD {found.account_password}")
+                                else:
+                                    print("The account does not exist")
+                            elif proc == 'n':
+                                break
+                            else:
+                                print("Enter a valid choice")
 
                     
 if __name__ == '__main__':
