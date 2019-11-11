@@ -54,6 +54,18 @@ def main():
             print('\n')
             print('Enter password')
             nompass = input()
- 
+ print(f"Welcome:{nomname} to your Account ")
+            print('*'*40)
+
+            print("Select an option either 1,2,3,4 or 5")
+            print('\n')
+
+            while True:
+                    print('1:Add credential')
+                    print('2:View saved credential')
+                    print('3:Delete Credentials')
+                    print('4:Search Credentials')
+                    print('5:Leave')
+                    selected = input()
 if __name__ == '__main__':
     main()
