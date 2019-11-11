@@ -47,24 +47,24 @@ def find_by_name (cls,account_name):
     for credential in cls.credential_list:   
          if credential.account_name == account_name:
              return credential    
- @classmethod    
-    def credential_exists(cls,acc_name):
-        '''
-        Method that checks if a credential object exists from the credential  list.
-        Args:
-            acc_name: Account  to search if it exists
-        Returns :
-            Boolean: True or false depending if the object exists
-        '''
-        
-        for credential in cls.credentials_list:
-            if credential.account_name == account_name:
-                return True
-        return False    
+@classmethod    
+def credential_exists(cls,acc_name):
+    '''
+    Method that checks if a credential object exists from the credential  list.
+    Args:
+        acc_name: Account  to search if it exists
+    Returns :
+        Boolean: True or false depending if the object exists
+    '''
 
- @classmethod
-    def display_credentials(cls):
-        '''
-        Method which will display the credential list
-        '''
-        return cls.credentials_list  
+    for credential in cls.credentials_list:
+        if credential.account_name == account_name:
+            return True
+    return False    
+
+@classmethod
+def display_credentials(cls):
+    '''
+    Method which will display the credential list
+    '''
+    return cls.credentials_list  
