@@ -214,6 +214,35 @@ def main():
                                 else:
                                     print(
                                         "Wrong choice use  either y to continue or n to stop")
+                                    elif selected == '2':
+                            while True:
+                                print('view your credenttial below')
+                                if display_credential():
+
+                                    for creds in display_credential():
+                                        print(
+                                            f"****Account Name:{creds.account_name} username:{creds.username} Password:{creds.account_password}***")
+                                        print(
+                                            f"")
+                                else:
+                                    print('\n')
+                                    print(
+                                        "You don't have any saved credential before \n")
+
+                                print("Do you want to go back yes/no")
+
+                                reverse = input().lower()
+                                if reverse == 'yes':
+                                    break
+                                elif reverse == 'no':
+                                    continue
+                                else:
+                                    print("Please input the correct choice")
+                                    continue
+                        elif selected == '3':
+                            while True:
+                                print("search for account to delete credential")
+
 
                     
 if __name__ == '__main__':
