@@ -66,6 +66,31 @@ def main():
                     print('3:Delete Credentials')
                     print('4:Search Credentials')
                     print('5:Leave')
-                    selected = input()
+                    selected = input()if selected == '1':
+                        while True:
+                            print('Do you want to proceed? y/n')
+
+                            decision = input().lower()
+                            if decision == 'y':
+                                print("Enter Account name")
+                                accname = input()
+                                print("Enter username")
+                                uname = input()
+                                print("Enter a password")
+                                print(
+                                    "Do you want a computer generated password ? use 'gp' or 'new' to create your own ")
+                                word = input().lower()
+                                if word == 'gp':
+                                    accpass = random.randint(0, 1000)
+                                    print(
+                                        f"Account:{accname} Username: {uname} Password:{accpass}")
+                                    print('\n')
+                                elif word == 'new':
+                                    print("Create password")
+                                    accpass = input()
+                                    print(
+                                        f"Account:{accname} Password:{accpass}")
+
+                    
 if __name__ == '__main__':
     main()
