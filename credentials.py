@@ -97,7 +97,7 @@ def main():
                                     "Wrong choice use  either y to continue or n to stop")
                     elif selected == '2':
                         while True:
-                            print('view your credenttial below')
+                            print('view your credential below')
                             if display_credential():
 
                                 for credential in display_credential():
